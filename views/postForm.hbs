@@ -1,0 +1,30 @@
+<div class="col">
+	<div class="row">
+		<h1>{{#if title}}Edit{{else}}Create{{/if}} post</h1>
+	</div>
+	<div class="row">
+		<form action="/posts{{#if title}}/{{_id}}/edit{{else}}/create{{/if}}" method="POST">
+			<div class="form-group">
+				<label for="title">Title</label>
+				<input class="form-control" type="text" id="title" name="title" value="{{title}}">
+			</div>
+			<div class="form-group">
+				<label for="description">Description</label>
+				<textarea class="form-control" type="text" id="description" name="description">{{description}}</textarea>
+			</div>
+			<div class="form-group">
+				<label for="author">Author</label>
+				<input class="form-control" type="text" id="author" name="author" value="{{author}}">
+			</div>
+			<div class="form-group">
+				<label for="image">Image</label>
+				<input class="form-control" type="url" id="image" name="image" value="{{image}}">
+			</div>
+			<div class="form-group">
+				<label for="tags">Tags</label>
+				<input class="form-control" type="text" id="tags" name="tags" placeholder="Input your tags separated by commas" value="{{tags}}">
+			</div>
+			<button type="submit" class="btn btn-primary">{{#if title}}Edit{{else}}Create{{/if}}</button>
+		</form>
+	</div>
+</div>

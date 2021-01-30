@@ -8,3 +8,13 @@
 		{{/each}}
 	</div>
 </section>
+<a id="edit__post" href="/posts/{{_id}}/edit">Edit</a>
+<a id="delete__post" href="/posts/{{_id}}/delete">Delete</a>
+
+{{#if delete}}
+<div class="deleteModal__wrapper">
+	<div class="deleteModal">
+		Are you sure you want to delete? <form action="/posts/{{_id}}/delete" method="POST"><button type="submit" class="btn btn-primary">Yes</button></form> <a href="/posts/{{_id}}" type="submit" class="btn btn-danger">No</a>
+	</div>
+</div>
+{{/if}}

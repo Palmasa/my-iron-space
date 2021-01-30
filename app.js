@@ -23,7 +23,9 @@ app.use((req, res, next) => {
 
 app.use((error, req, res, next) => {
   console.log(error);
-  error.status = error.status || 500;
+  if (!error.status) {
+    error = createError(500);
+  }
   res.status(error.status);
   res.render("error", error);
 });
