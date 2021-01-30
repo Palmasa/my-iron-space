@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const postsController = require("../controllers/posts.controller");
+const usersController = require("../controllers/users.controller");
 const miscController = require("../controllers/misc.controller");
 
 // home
@@ -16,5 +17,6 @@ router.post("/posts/:id/delete", postsController.doDelete);
 router.get("/posts/:id", postsController.detail);
 
 // users
+router.get("/users/:id", usersController.profile);
 
 module.exports = router;

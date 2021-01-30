@@ -1,0 +1,11 @@
+<section id="user">
+	<h3>{{userName}}'s profile</h3>
+	<p>Age: {{age}}</p>
+	<p>Name: {{name}}</p>
+	<p>Email: {{email}}</p>
+</section>
+<section id="posts">
+	{{#each posts as |post|}}
+		{{>postInfo post}}
+	{{/each}}
+</section>

@@ -39,6 +39,10 @@ nav>a:hover {
   color: black;
 }
 
+.post__author {
+  text-decoration: none;
+}
+
 .post__description {
   max-height: 50px;
   overflow: hidden;
